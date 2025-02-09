@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class=" overflow-x-hidden font-Roboto dark:bg-darktheme  dark:text-white">
+    <div class="fixed w-11/12 top-0 right-0 -z-10 -translate-y-[80%]">
+        <img src="/img/header-bg-color.png" alt="" class=" w-full dark:hidden">
+    </div>
+    <nav  class="w-full fixed lg:px-5 xl:px-[8%] py-4 items-center justify-between flex z-50">
+        <img src="/img/WhatsApp Image 2025-02-01 at 1.49.50 PM.jpeg" alt="logo" class="w-14 rounded-full cursor-pointer mr-14 dark:hidden"> 
+        <img src="img/WhatsApp Image 2025-02-01 at 1.41.20 PM.jpeg" alt="logo" class="w-14 rounded-full cursor-pointer mr-14 hidden dark:block">
+        <ul class="hidden md:flex items-center gap-4 lg:gap-8 rounded-full px-12 py-4 bg-white shadow-sm object-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-1">
+        <button class="flex items-center" onclick="toggleTheme()"><img src="img/moon_icon.png"  class="w-6 cursor-pointer dark:hidden" alt="">
+            <img src="img/sun_icon.png"  class="w-6 cursor-pointer hidden dark:block" alt=""></button>
+        <a href="contact" class="hidden lg:flex items-center gap-3 ml-4 rounded-full px-10 py-2.5 border border-gray500">Contact
+             <img src="/img/arrow-icon.png" alt="" class="w-3 dark:hidden ">
+             <img src="img/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block"></a>
+        <button class="block md:hidden ml-1" onclick="openmenu()"><img src="/img/menu-black.png" alt="" class="w-6 cursor-pointer dark:hidden">
+            <img src="img/images/menu-white.png" alt="" class="w-6 cursor-pointer hidden dark:block"></button>
+        <!-- mobile menu -->
+         <div>
+            
+            <ul id="sidemenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 -right-64 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darktheme">
+                <div class="absolute top-6 right-6" onclick="closemenu()"> 
+                    <img src="/img/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden" >
+                    <img src="/img/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block" >
+                </div>
+                <li><a href="#top" onclick="closemenu()">Home</a></li>
+                <li><a href="#about" onclick="closemenu()">About</a></li>
+                <li><a href="#services" onclick="closemenu()">Services</a></li>
+                <li><a href="#work" onclick="closemenu()">My Work</a></li>
+                <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+            </ul>
+         </div>
+    </nav>
+
+    <div class="h-screen flex flex-col items-center"> 
+        <div class="w-11/12 max-w-3xl text-center flex flex-col items-center mx-auto gap-4 mt-32">  
+            <img src="/img/Picsart_25-02-01_18-01-58-580.jpg" alt="" class="w-32 rounded-full">
+            <h3 class="flex items-center gap-2 text-1xl font-bold md:text-2xl mb-2 lg:text-3xl font-Sans"> Hello I'm Rohith <img src="img/hand-icon.png" alt="" class="w-10"></h3>
+            <h1 class="text-4xl font-bold md:text-3xl mb-2 lg:text-4xl font-Sans">Web Developer| IoT Developer</h1>
+            <p class="text-lg md:text-xl lg:text-2xl font-Sans">As a Web Developer, I design dynamic websites, while as an IoT Developer, I innovate by connecting smart devices for seamless automation and data exchange.</p>
+        </div>
+    
+
+    <div class=" flex  justify-center flex-col  sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact" class="px-10 py-2.5 rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white shadow-sm flex items-center gap-2 ">Contact <img src="img/right-arrow-white.png" alt="" class="w-3"></a>
+
+        <a href="/img/WhatsApp Image 2025-02-01 at 1.49.50 PM.jpeg" download class="px-10 py-2.5  border rounded-full border-gray flex items-center gap-2 dark:bg-white dark:text-black">My resume <img src="img/download-icon.png" alt="" class="w-5"></a>
+    </div>
+
+    <div id="about" class="w-full px-[12%] py-10 mt-30 ">
+        <h4 class="text-center mb-2 text-lg font-Sans">Introduction</h4>
+        <h2 class="text-center text-5xl font-bold font-Sans">About Me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row justify-center  gap-20 my-20">
+            <div class="max-w-max mx-auto relative">
+                <img src="img/Picsart_25-02-01_20-24-23-489.jpg" class="w-64 rounded-3xl sm:w-80 ">
+                <div class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
+                      <img src="/img/circular-text.png" alt="" class="w-full animate-spin_slow ">
+                      <img src="/img/dev-icon.png" alt="" class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                </div>
+            </div>
+
+            <div class="flex-1">
+
+                <p class="mb-10 max-w-2xl font-Sans ">I am a Web Developer & IOT engineer passionate about building innovative digital experiences and smart solutions. With exoertise in mobern web techologies and Internet of Things(Iot) systems, I create interative, responsive websites and intelligent automations systems that bridge the gap between the digital and physical world </p>
+                <ul class="grid grid-cols-auto sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-dark dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50 ">
+                        <img src="img/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="img/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+
+                        <h3 class="my-4 font-semibold text-gray-700 font-Sans dark:text-white">Languages</h3>
+                        <p class=" text-gray-600 text-sm font-Sans dark:text-white">HTML, CSS, JavaScript, Tailwindcss, C Languages</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-dark dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="img/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="img/project-icon-dark.png" alt="" class="w-7 mt-3  hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 font-Sans dark:text-white">Education</h3>
+                        <p class=" text-gray-600 text-sm font-Sans dark:text-white">Bachelor of Engineering in Electronics and Communication</p>
+                    </li>
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-dark dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+                        <img src="img/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="img/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+                        <p class=" text-gray-600 text-sm dark:text-white">Portfolio, IOT based projects</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 font-semibold text-gray-700 dark:text-white">Tools i use</h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="img/vscode.png" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="img\download (3).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="/img/OIP (5).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="/img/OIP (7).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="/img/OIP (8).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="/img/OIP (9).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                    <li class="flex items-center justify-center w-12 sm:14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500">
+                        <img src="/img/download (4).jpg" alt="" class=" w:4 sm:w-4">
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg dark:text-white">What I Offer</h4>
+        <h2 class="text-center text-5xl font-bold dark:text-white">My Services</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 dark:text-white">I am a engineering student studying in S A Engineering College with skills of Web Development and Iot Projects </p>
+   
+       <div class="grid grid-cols-auto gap-6 my-10">
+          <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-dark hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="img/web-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white">Web Development is the process of building websites, programming.....</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5 font-semibold dark:text-white">Read more <img src="/img/right-arrow.png" alt="" class="w-4"></a>
+          </div>
+
+          <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-dark hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover/50 dark:hover:shadow-white">
+            <img src="img/mobile-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Iot Projects</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white">Iot Projects with Automation</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5 font-semibold dark:text-white">Read more <img src="/img/right-arrow.png" alt="" class="w-4"></a>
+          </div>
+          
+       </div>
+</div>
+      
+        <div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+            <h4 class="text-center mb-2 text-lg dark:text-white">My portfolio</h4>
+            <h2 class="text-center text-5xl font-bold dark:text-white">My latest works</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12 dark:text-white">Welcome to my web development and Iot Projects portfolio! Explore a collection of projects showcasing my expertise in  </p>
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-10 ">
+                <div class="aspect-square bg-[url('/img/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                        <div> 
+                            <h2 class="font-semibold dark:text-black">Frontend Projects</h2>
+                            <p class="text-sm text-gray-700">Web Design</p>
+                        </div>
+                        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="/img/images/send-icon.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aspect-square bg-[url('/img/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                        <div>
+                            <h2 class="font-semibold dark:text-black">Iot Projects</h2>
+                            <p class="text-sm text-gray-700">Automation</p>
+                        </div>
+                        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="/img/images/send-icon.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aspect-square bg-[url('/img/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                        <div>
+                            <h2 class="font-semibold dark:text-black">Ui/Ux Design</h2>
+                            <p class="text-sm text-gray-700">App Design</p>
+                        </div>
+                        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="/img/images/send-icon.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aspect-square bg-[url('/img/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+                    <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                        <div>
+                            <h2 class="font-semibold dark:text-black">Clone Projects</h2>
+                            <p class="text-sm text-gray-700">Cloning App</p>
+                        </div>
+                        <div class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="/img/images/send-icon.png" alt="" class="w-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class=" flex w-max items-center justify-center gap-2 text-gray-700 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 dark:text-white dark:bg-transparent dark:text-white dark:border-[0.5px] dark:hover:bg-darkHover">Show More<img src="img/right-arrow-bold.png" alt="" class="w-4 dark:hidden "><img src="img/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block"></a>
+            
+        </div>
+
+        <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('img/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+            <h4 class="text-center mb-2 text-lg">Connect with Me</h4>
+            <h2 class="text-center text-5xl font-bold">Get in touch</h2>
+            <p class="text-center max-w-2xl mx-auto mt-5 mb-12">i'd love to hear from you! If you have any questions, comments or feedback, please use the form below</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="max-w-2xl mx-auto">
+                <input type="hidden" name="access_key" value="0adb077f-f28b-4dbc-8fe7-a3cd3769700b">
+                <div class=" grid grid-cols-auto gap-6 mt-10 mb-6">
+                   <input type="text" placeholder="Enter Your Name" name="name" required class=" flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90">
+                   <input type="email" placeholder="Enter Your Email" name="email" required class=" flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 ">
+                </div>
+                <div>
+                    <textarea rows="6" placeholder="Enter your Message" name="message" required class="w-full p-4  outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"></textarea>
+                </div>
+
+                <button class="py-3 px-8 w-max flex items-center justify-center rounded-full mx-auto gap-2 bg-black/80 text-white hover:bg-black duration-500 dark:bg-transparent dark:text-white dark:border-[0.5px] dark:hover:bg-darkHover">Submit Now <img src="/img/right-arrow-white.png" alt=""  class="w-4"></button>
+            </form>
+        </div>
+
+        <div class="mt-20">
+            <div class="text-center">
+                <img src="img\WhatsApp Image 2025-02-01 at 1.49.50 PM.jpeg" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+                <img src="img\WhatsApp Image 2025-02-01 at 1.41.20 PM.jpeg" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+                <div class="w-max flex items-center gap-2 mx-auto">
+                    <img src="/img/mail_icon.png" alt="" class="w-4 dark:hidden">
+                    <img src="/img/mail_icon_dark.png" alt="" class="w-4 hidden dark:block">
+                    rohithtj1675@gmail.com
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center flex-wrap  gap:10 lg:gap-50 sm:flex items-center justify-between border-t border-gray-400 mx-auto mt-12 py-6">
+            <p>© 2025 Rohith T J(Tech Titans). All rights reserved</p>
+            <ul class="flex items-center gap-10 mt-4 sm:mt-0">
+                <li><a href="" class="hover:text-gray-600 px-2">LinkedIn</a></li>
+                <li><a href="" class="hover:text-gray-600 px-2">GitHub</a></li>
+                <li><a href="" class="hover:text-gray-600 px-2">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
